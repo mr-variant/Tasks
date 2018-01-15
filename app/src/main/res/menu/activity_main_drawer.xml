@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_my_day"
+            android:icon="@drawable/ic_star"
+            android:title="@string/menu_my_day" />
+        <item
+            android:id="@+id/nav_schedule"
+            android:icon="@drawable/ic_schedule"
+            android:title="@string/menu_schedule" />
+
+        <item
+            android:id="@+id/nav_reminders"
+            android:icon="@drawable/ic_bell"
+            android:title="@string/menu_reminders" />
+        <item
+            android:id="@+id/nav_tags"
+            android:icon="@drawable/ic_tags"
+            android:title="@string/menu_tags" />
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/ic_search"
+            android:title="@string/menu_search" />
+
+    </group>
+
+    <item android:title="@string/menu_info">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/menu_settings" />
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_help"
+                android:title="@string/menu_help" />
+        </menu>
+    </item>
+
+</menu>
