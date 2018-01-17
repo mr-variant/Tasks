@@ -1,4 +1,4 @@
-package variantproject.tasks;
+package variantproject.tasks.Activities;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
@@ -22,10 +22,12 @@ import android.widget.Toast;
 import java.util.LinkedList;
 import java.util.List;
 
+import variantproject.tasks.R;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    TextView textViewEmail;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,18 +35,8 @@ public class MainActivity extends AppCompatActivity
             setContentView(R.layout.activity_main);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
-            setTitle(getString(R.string.menu_my_day));
 
 
-
-            FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-            fab.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }
-            });
 
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -56,9 +48,20 @@ public class MainActivity extends AppCompatActivity
             NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
             navigationView.setNavigationItemSelectedListener(this);
             navigationView.setItemIconTintList(null); // menu is color
+            navigationView.getMenu().getItem(0).setChecked(true);
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                   /*switch ()
+                    {
 
+                    }*/
+                //navigationView.sele
+            }
+        });
 
         }
 
@@ -102,9 +105,11 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+
         if (id == R.id.nav_help) {
             // Handle the camera action
         } else if (id == R.id.nav_my_day) {
+            setTitle(getString(R.string.menu_my_day));
 
         } else if (id == R.id.nav_my_day) {
 
